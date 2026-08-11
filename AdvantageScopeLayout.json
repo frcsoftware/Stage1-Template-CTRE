@@ -8,10 +8,15 @@
             "state": {
                 "sidebar": {
                     "width": 300,
-                    "expanded": ["/DrivetrainSim"]
+                    "expanded": [
+                        "/DrivetrainSim",
+                        "/IntakeLauncher",
+                        "/Feeder",
+                        "/Drivetrain"
+                    ]
                 },
                 "tabs": {
-                    "selected": 1,
+                    "selected": 2,
                     "tabs": [
                         {
                             "type": 0,
@@ -23,12 +28,12 @@
                         },
                         {
                             "type": 1,
-                            "title": "Line Graph",
+                            "title": "",
                             "controller": {
                                 "leftSources": [
                                     {
                                         "type": "stepped",
-                                        "logKey": "NT:/intake/MotorVoltage",
+                                        "logKey": "NT:/IntakeLauncher/MotorVoltage",
                                         "logType": "Number",
                                         "visible": true,
                                         "options": {
@@ -38,7 +43,7 @@
                                     },
                                     {
                                         "type": "stepped",
-                                        "logKey": "NT:/shooter/MotorVoltage",
+                                        "logKey": "NT:/Feeder/MotorVoltage",
                                         "logType": "Number",
                                         "visible": true,
                                         "options": {
@@ -50,7 +55,7 @@
                                 "rightSources": [
                                     {
                                         "type": "stepped",
-                                        "logKey": "NT:/intake/MotorVelocity",
+                                        "logKey": "NT:/IntakeLauncher/MotorVelocity",
                                         "logType": "Number",
                                         "visible": true,
                                         "options": {
@@ -60,7 +65,7 @@
                                     },
                                     {
                                         "type": "stepped",
-                                        "logKey": "NT:/shooter/MotorVelocity",
+                                        "logKey": "NT:/Feeder/MotorVelocity",
                                         "logType": "Number",
                                         "visible": true,
                                         "options": {
@@ -81,7 +86,8 @@
                                     "preset": null
                                 },
                                 "leftFilter": 0,
-                                "rightFilter": 0
+                                "rightFilter": 0,
+                                "showRobotMode": false
                             },
                             "controllerUUID": "2htqlla9hnswdie42z4tmy5c6xlm59sh",
                             "renderer": null,
@@ -89,12 +95,12 @@
                         },
                         {
                             "type": 2,
-                            "title": "2D Field",
+                            "title": "",
                             "controller": {
                                 "sources": [
                                     {
                                         "type": "robot",
-                                        "logKey": "NT:SimPose",
+                                        "logKey": "NT:/Drivetrain/Pose",
                                         "logType": "Pose2d",
                                         "visible": true,
                                         "options": {
@@ -116,5 +122,5 @@
         }
     ],
     "satellites": [],
-    "version": "27.0.0-alpha-4"
+    "version": "27.0.0-alpha-5"
 }
